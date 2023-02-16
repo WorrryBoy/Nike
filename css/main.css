@@ -1,9 +1,18 @@
 ::-webkit-scrollbar {
-    width: 0;
+    width: 7px;
+    background: rgb(0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(172, 52, 52);
+    border-radius: 10px;
 }
 @font-face {
     font-family: 'FuturaBD';
     src: url('FuturaBD');
+}
+@font-face {
+    font-family: 'FuturaXB';
+    src: url('FuturaXB');
 }
 @font-face {
     font-family: 'FuturaLT';
@@ -12,6 +21,14 @@
 @font-face {
     font-family: 'FuturaBK';
     src: url('FuturaBK');
+}
+@font-face {
+    font-family: 'FuturaMD';
+    src: url('FuturaMD');
+}
+@font-face {
+    font-family: 'FuturaHV';
+    src: url('FuturaHV');
 }
 .header {
     background: url(../img/bg.jpg);
@@ -439,14 +456,18 @@ main {
     max-width: 1080px;
     margin: 0 auto;
 }
+.img-after, .img-before {
+    position: relative;
+}
 .img-after::after {
     content: '';
     width: 72px;
     height: 72px;
     position: absolute;
-    left: 64%;
+    right: -100px;
     margin-top: 20px;
     background-image: url(../img/info-1.jpg);
+    box-sizing: inherit;
 }
 .img-before::before {
     content: '';
@@ -454,8 +475,7 @@ main {
     height: 72px;
     position: absolute;
     margin-top: 20px;
-    left: 31%;
-    margin-top: 110px;
+    left: -205px;
     background-image: url(../img/info-2.jpg);
 }
 .info-desc {
@@ -506,7 +526,7 @@ main {
     content: '';
     position: absolute;
     background: url(../img/vector-line.svg) no-repeat;
-    height: 5000px;
+    height: 3300px;
     width: 800px;
     left: -120px;
     top: 120px;
@@ -564,7 +584,7 @@ main {
     transform: scaleX(0);
     height: 100%;
     color: #fff;
-    transition: 0.3s;
+    transition: cubic-bezier(.1, .9, .9, 1.5) 0.3s;
     transform-origin: left;
 }
 .left.women::before,
@@ -590,4 +610,319 @@ main {
     scroll-behavior: smooth;
     width: 756px;
     height: 640px;
+}
+.sport {
+    margin-top: 330px;
+}
+.sport-title {
+    text-align: center;
+    font-size: 96px;
+    font-style: italic;
+    transform: rotate(-11deg);
+}
+.sport-title-1 {
+    color: #fff;
+    font-family: 'FuturaXB', sans-serif;
+}
+.sport-title-2 {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    padding-left: 405px;
+    position: relative;
+    top: -50px;
+    font-family: 'FuturaXB', sans-serif;
+}
+.sport-container {
+    max-width: 1310px;
+    margin: 0 auto;
+}
+.sport-first, .sport-second, .sport-third {
+    display: flex;
+    align-items: center;
+}
+.sport-second {
+    justify-content: end;
+}
+
+.sport-box {
+    width: auto;
+    padding-left: 100px;
+}
+.sport-img {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.sport-platform-1, .sport-platform-5 {
+    margin-right: 60px;
+}
+.sport-platform-3 {
+    margin-right: 60px;
+}
+.sport-platform-4 {
+    margin-right: 140px;
+    top: -10px;
+}
+.box-platform {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    transition: 0.3s;
+}
+.box-platform::after {
+    content: "";
+    background-image: url(../img/sport-platform.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 46px;
+    position: relative;
+    background-size: contain;
+    right: 10px;
+    background-position: center;
+    top: -40px;
+}
+.sport-platform-1 {
+    top: 35px;
+}
+.sport-platform-5 {
+    top: -50px
+}
+.sport-text {
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    font-size: 20px;
+}
+.sport-text-1 {
+    top: 55%;
+    color: #fff;
+    position: absolute;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+}
+.sport-text-2 {
+    top: 55%;
+    color: #fff;
+    position: absolute;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.platform-con {
+    position: relative;
+    height: 400px;
+}
+.box-platform:hover {
+    cursor: pointer;
+}
+.transform-sport {
+    transform: translateY(-20px) scale(1.1);
+    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.3s;
+    animation-fill-mode: forwards;
+}
+.transform-sport2 {
+    transform: translateY(1) scale(1);
+    transition: 0.3s;
+}
+.change::after {
+    transform: scale(.95);
+    transition: 0.3s;
+}
+.transform-sport2::after {
+    transform: scale(1);
+    transition: 0.3s;
+}
+.sport-img::after {
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    background-color: #ba0000;
+}
+.sport-decor {
+    position: relative;
+    overflow: hidden;
+}
+.sport-title-1 {
+    position: relative;
+}
+.sport-title-1::after {
+    content: "";
+    background: url(../img/sport-decor.png);
+    width: 300px;
+    height: 130px;
+    position: absolute;
+    left: 700px;
+    top: -25px;
+    mix-blend-mode: multiply;
+}
+.modern {
+    margin-top: 100px;
+}
+.modern-title h2 {
+    margin: 0 0 24px;
+    font-family: 'FuturaMD', sans-serif;
+    font-size: 64px;
+    line-height: 77px;
+    font-weight: 600;
+}
+.modern-desc {
+    margin: 0 0 40px;
+    font-family: 'FuturaBK', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    padding-bottom: 30px;
+}
+.modern-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+}
+.modern-info {
+    max-width: 720px;
+    color: #fff;
+}
+.modern-btn, .visionaries-btn, .shoes-btn a{
+    border: 1px solid #d6d6d6;
+    padding: 16px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff;
+}
+.modern-img{
+    z-index: 2;
+    position: relative;
+}
+.modern-img::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(204, 204, 204);
+    z-index: -2;
+    left: 40px;
+}
+.modern-img::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(from 9.34deg at 46.78% 51.75%,#ba0000 0deg,#ba0000 360deg);
+    filter: blur(125px);
+    left: 0;
+    mix-blend-mode: hard-light;
+    z-index: -1;
+}
+.visionaries {
+    margin-top: 300px;
+}
+.visionaries-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.visionaries-info {
+    color: #fff;
+    max-width: 621px;
+    padding-bottom: 20px;
+}
+.visionaries-title h2 {
+    font-size: 48px;
+}
+.visionaries-title h2 span {
+    color: #ba0000;
+}
+.visionaries_p {
+    margin: 0 0 32px;
+    font-family: 'FuturaBK', sans-serif;
+    font-size: 16px;
+    line-height: 23px;
+    text-transform: capitalize;
+}
+.visionaries_p span {
+    font-family: 'FuturBD', sans-serif;
+    font-weight: 900;
+}
+.shoes {
+    margin-top: 200px;
+}
+.shoes-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.shoes-img-wrapper {
+    display: flex;
+    position: relative;
+    width: 600px;
+    height: 508px;
+}
+.shoes-info {
+    color: #fff;
+}
+.shoes-title h2 {
+    font-family: 'FuturaMD', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 77px;
+    margin: 0;
+    max-width: 705px;
+}
+.shoes-desc {
+    margin: 0 0 40px;
+    display: block;
+    max-width: 620px;
+    font-family: 'FuturaBK';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+.shoes-img-wrapper::before {
+    content: '';
+    background: #ba0000;
+    width: 100%;
+    height: 100%;
+    filter: blur(110px);
+    mix-blend-mode: hard-light;
+    position: absolute;
+}
+.shoes-img {
+    border-radius: 15px;
+}
+.shoes-con {
+    position: absolute;
+    top: 0;
+}
+.shoes-1 {
+    top: 120px;
+}
+.shoes-2 {
+    right: 0;
+}
+.shoes-3 {
+    right: 0;
+    top: 310px;
+}
+.shoes {
+    padding-bottom: 500px;
 }
