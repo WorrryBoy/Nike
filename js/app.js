@@ -181,12 +181,81 @@ let i = 10;
 a = 20
 window.addEventListener('scroll', ()=> {
     let scrolldistance = window.scrollY;
-    if (scrolldistance > 400 && scrolldistance < 2601) {
-        a++
-        i = Math.floor(scrolldistance / 27)
+    if (scrolldistance > 900 && scrolldistance < 2601) {
+        i = Math.floor(scrolldistance / 25)
         document.querySelector('.adidas').style.transform = `translateY(-${i}%)`
         console.log(scrolldistance)
         console.log(i)
     }
 });
-window.scrollY({behavior:'smooth'})
+function transform(){
+    sport_img.classList.add('transform-sport')
+}
+//let platform = document.querySelectorAll('.sport-platform-1, .sport-platform-2, .sport-platform-3, .sport-platform-4, .sport-platform-5, .sport-platform-6');
+let sportimg = document.querySelectorAll('.sport-img-1, .sport-img-2, .sport-img-3, .sport-img-4, .sport-img-5, .sport-img-6');
+let platform = document.querySelectorAll('.sport-platform-1, .sport-platform-2, .sport-platform-3, .sport-platform-4, .sport-platform-5, .sport-platform-6')
+let box = document.querySelectorAll('.box-platform')
+/*sportimg.forEach(item => {
+    item.addEventListener('mouseover', ()=> {
+        item.classList.add('transform-sport')
+    });
+    item.addEventListener('mouseout', ()=> {
+        item.classList.remove('transform-sport')
+        item.classList.add('transform-sport2')
+    });
+});
+platform.forEach(item => {
+    item.addEventListener('mouseover', ()=> {
+        item.classList.add('change');
+        item.classList.remove('transform-sport2')
+    });
+    item.addEventListener('mouseout', ()=> {
+        item.classList.remove('change');
+        item.classList.add('transform-sport2')
+    });
+});
+*/
+let con = document.querySelectorAll('.box-platform');
+con.forEach((el) =>{
+    el.addEventListener('mouseover', (e)=> {
+        let dataimg = e.currentTarget.getAttribute("data-img");
+        console.log(dataimg)
+        document.querySelector(`.sport-img-${dataimg}`).classList.add('transform-sport')
+        document.querySelector(`.sport-platform-${dataimg}`).classList.add('change')
+        document.querySelector(`.sport-img-${dataimg}`).classList.remove('transform-sport2')
+        document.querySelector(`.sport-platform-${dataimg}`).classList.remove('transform-sport2')
+    });
+    el.addEventListener('mouseout', (e)=> {
+        let dataimg = e.currentTarget.getAttribute("data-img");
+        console.log(dataimg)
+        document.querySelector(`.sport-img-${dataimg}`).classList.remove('transform-sport')
+        document.querySelector(`.sport-img-${dataimg}`).classList.add('transform-sport2')
+        document.querySelector(`.sport-platform-${dataimg}`).classList.remove('change')
+        document.querySelector(`.sport-platform-${dataimg}`).classList.add('transform-sport2')
+    });
+});
+let shoesSt = document.querySelector('.shoes-img-1')
+let shoesNd = document.querySelector('.shoes-img-3')
+let shoesRd = document.querySelector('.shoes-img-2')
+let modern = document.querySelector('.sneak-modern')
+window.addEventListener('scroll', ()=> {
+    scrolldistance = window.scrollY
+    if (scrolldistance > 3951 && scrolldistance < 4900) {
+        o = ((scrolldistance - 4152) / 4)
+        if (o < 100.26) {
+            modern.style.transform = `translateY(${-o}px)`
+        }
+    }
+    console.log(scrolldistance)
+    if (scrolldistance > 5587 && scrolldistance < 6390) {
+        q = ((scrolldistance - 5587) /4)
+        qnd = ((scrolldistance - 5587) /6)
+        qrd = ((scrolldistance - 5587) /8)
+        if (q < 200.6) {
+            shoesSt.style.transform = `translateY(${-q}px)`
+            shoesNd.style.transform = `translateY(${-qnd}px)`
+            shoesRd.style.transform = `translateY(${-qrd}px)`
+        }   
+    }
+    
+});
