@@ -182,10 +182,8 @@ a = 20
 window.addEventListener('scroll', ()=> {
     let scrolldistance = window.scrollY;
     if (scrolldistance > 900 && scrolldistance < 2601) {
-        i = Math.floor(scrolldistance / 25)
+        i = Math.floor((scrolldistance - 900) / 13)
         document.querySelector('.adidas').style.transform = `translateY(-${i}%)`
-        console.log(scrolldistance)
-        console.log(i)
     }
 });
 function transform(){
@@ -246,16 +244,41 @@ window.addEventListener('scroll', ()=> {
             modern.style.transform = `translateY(${-o}px)`
         }
     }
-    console.log(scrolldistance)
     if (scrolldistance > 5587 && scrolldistance < 6390) {
-        q = ((scrolldistance - 5587) /4)
-        qnd = ((scrolldistance - 5587) /6)
-        qrd = ((scrolldistance - 5587) /8)
-        if (q < 200.6) {
+        q = ((scrolldistance - 5587) /2)
+        qnd = ((scrolldistance - 5587) /2.7)
+        qrd = ((scrolldistance - 5587) /3)
+        if (q < 240.6) {
             shoesSt.style.transform = `translateY(${-q}px)`
             shoesNd.style.transform = `translateY(${-qnd}px)`
             shoesRd.style.transform = `translateY(${-qrd}px)`
         }   
     }
-    
+    console.log(scrolldistance)
 });
+let mail = document.querySelector('.email')
+document.querySelector('.subscribe-btn').addEventListener('mouseover', ()=> {
+    mail.classList.add('mail')
+    mail.classList.remove('mail-before')
+    document.querySelector('.subscribe-btn').classList.add('bg')
+    document.querySelector('.subscribe-btn').classList.remove('bg-before')
+});
+document.querySelector('.subscribe-btn').addEventListener('mouseout', ()=> {
+    mail.classList.remove('mail')
+    mail.classList.add('mail-before')
+    document.querySelector('.subscribe-btn').classList.remove('bg')
+    document.querySelector('.subscribe-btn').classList.add('bg-before')
+});
+
+//document.querySelector('.subscribe-btn').addEventListener('click', ()=> {
+    //mail.value = '';
+//});
+let burger = document.querySelector('.burger')
+burger.addEventListener('click', ()=> {
+    document.querySelector('.menu-burger').classList.toggle('initial-burger')
+    document.querySelector('body').classList.toggle('body-overflow')
+    document.querySelector('.item-animate-1').classList.toggle('menu-item-burger-1')
+    document.querySelector('.item-animate-2').classList.toggle('menu-item-burger-2')
+    document.querySelector('.item-animate-3').classList.toggle('menu-item-burger-3')
+    document.querySelector('.item-animate-4').classList.toggle('menu-item-burger-4')
+})
