@@ -9,11 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Manrope&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
 </head>
-<body data-scroll>
+<body>
+    
     <div class="header">
         <div class="container">
             <div class="header-nav">
-
+                <div class="burger">
+                    <div class="burger-btn"></div>
+                </div>
                 <ul class="menu-list">
                     <li class="menu-item">
                         <a href="#" class="menu-link"> New Arrival</a>
@@ -43,6 +46,22 @@
             </div>
         </div>
     </div>
+    <div class="menu-burger">
+        <ul class="menu-list-burger">
+            <li class="menu-item menu-item-burger item-animate-1">
+                <a href="#" class="menu-link"> New Arrival</a>
+            </li>
+            <li class="menu-item menu-item-burger item-animate-2">
+                <a href="#" class="menu-link">Men </a>
+            </li>
+            <li class="menu-item menu-item-burger item-animate-3">
+                <a href="#" class="menu-link">Women </a>
+            </li>
+            <li class="menu-item menu-item-burger item-animate-4">
+                <a href="#" class="menu-link">Kids </a>
+            </li>
+        </ul>
+    </div>
     <main>
         <section class="intro">
             <div class="intro-container">
@@ -69,7 +88,7 @@
                             </div>
                         </div>
                         <div class="button-intro buttonslow">
-                            <a href="#">More Details</a>
+                            <a href="#" onclick="return false">More Details</a>
                         </div>
                     </div>
                 </div>
@@ -160,7 +179,7 @@
             <div class="info-container"> 
                 <div class="info-wrapper">
                     <div class="info-title">
-                        <h2> <span class="img-after">THE ESSENCE </span>  <span class="half"> HANDCRAFTED</span>  OF <span class="img-before">FOOTWEAR. </span></h2>
+                        <h2> <span class="img-after">THE ESSENCE </span> <br> <span class="half"> HANDCRAFTED</span><br>  OF <span class="img-before">FOOTWEAR. </span></h2>
                     </div>
                 </div>
                 <p class="info-desc">
@@ -275,7 +294,7 @@
                         <div class="modern-desc">
                             Design for the way you live your life. Atoms are beautiful in their simplicity, supporting your feet with absolute comfort.
                         </div>
-                        <a class="modern-btn" href="#">Explore More</a>
+                        <a class="modern-btn" href="#" onclick="return false">Explore More</a>
                     </div>
                 </div>
             </div>
@@ -296,7 +315,7 @@
                             <p class="visionaries_p"><span> PURPOSEFUL DESIGN</span>  : We create products that captivate consumers and elevate brands. applying a refined sense of beauty and style, our designs are alluring.</p>
                             <p class="visionaries_p"> <span> RELENTLESS INNOVATION</span>  : We live to challenge the boundaries of convention and take advantage of every breakthrough opportunity big or small. we’ll help you define the cutting-edge of your business.</p>
                         </div>
-                        <a class="visionaries-btn" href="#">Customization Available</a>
+                        <a class="visionaries-btn" href="#" onclick="return false">Customization Available</a>
                     </div>
                 </div>
             </div>
@@ -312,7 +331,7 @@
                             <p>Design for the way you live your life. Atoms are beautiful in their simplicity, supporting your feet with absolute comfort.</p>
                         </div>
                         <div class="shoes-btn">
-                            <a href="#">Explore More</a>
+                            <a href="#" onclick="return false">Explore More</a>
                         </div>
                     </div>
                     <div class="shoes-img-wrapper">
@@ -326,6 +345,15 @@
                             <img class="shoes-img shoes-img-3" src="./img/shoes-3.jpg" alt="">
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="subsribe">
+            <div class="container">
+                <div class="subscribe-wrapper">
+                    <h2>Let’s Stay In Touch</h2>
+                    <input type="email" class="email" placeholder="Enter Email..."  pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}" title="text@text.2-4 символа" placeholder="email" required>
+                    <a href="#" onclick="return false" class="subscribe-btn" type="submit">Subscribe</a>
                 </div>
             </div>
         </section>
