@@ -250,22 +250,47 @@ let shoesRd = document.querySelector('.shoes-img-2')
 let modern = document.querySelector('.sneak-modern')
 window.addEventListener('scroll', ()=> {
     scrolldistance = window.scrollY
-    if (scrolldistance > 3951 && scrolldistance < 4900) {
-        o = ((scrolldistance - 4152) / 4)
-        if (o < 100.26) {
-            modern.style.transform = `translateY(${-o}px)`
+    if (window.screen.width > 501) {
+        if (scrolldistance > 3951 && scrolldistance < 4900) {
+            o = ((scrolldistance - 4152) / 4)
+            if (o < 100.26) {
+                modern.style.transform = `translateY(${-o}px)`
+            }
         }
     }
-    if (scrolldistance > 5587 && scrolldistance < 6390) {
-        q = ((scrolldistance - 5587) /2)
-        qnd = ((scrolldistance - 5587) /2.7)
-        qrd = ((scrolldistance - 5587) /3)
-        if (q < 240.6) {
-            shoesSt.style.transform = `translateY(${-q}px)`
-            shoesNd.style.transform = `translateY(${-qnd}px)`
-            shoesRd.style.transform = `translateY(${-qrd}px)`
-        }   
+    if (window.screen.width > 501) {
+        if (scrolldistance > 5587 && scrolldistance < 6390) {
+            q = ((scrolldistance - 5587) /2)
+            qnd = ((scrolldistance - 5587) /2.7)
+            qrd = ((scrolldistance - 5587) /3)
+            if (q < 240.6) {
+                shoesSt.style.transform = `translateY(${-q}px)`
+                shoesNd.style.transform = `translateY(${-qnd}px)`
+                shoesRd.style.transform = `translateY(${-qrd}px)`
+            }   
+        }
     }
+    if (window.screen.width < 501) {
+        if (scrolldistance > 8314 && scrolldistance < 9300) {
+            q = ((scrolldistance - 8314) /2)
+            qnd = ((scrolldistance - 8314) /2.7)
+            qrd = ((scrolldistance - 8314) /3)
+            if (q < 240.6) {
+                shoesSt.style.transform = `translateY(${-q}px)`
+                shoesNd.style.transform = `translateY(${-qnd}px)`
+                shoesRd.style.transform = `translateY(${-qrd}px)`
+            }   
+        }
+    }
+    if (window.screen.width < 501) {
+        if (scrolldistance > 5009 && scrolldistance < 6200) {
+            o = ((scrolldistance - 5009) / 4)
+            if (o < 130.26) {
+                modern.style.transform = `translateY(${-o}px)`
+            }
+        }
+    }
+    console.log(scrolldistance)
 });
 let mail = document.querySelector('.email')
 document.querySelector('.subscribe-btn').addEventListener('mouseover', ()=> {
