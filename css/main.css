@@ -69,11 +69,12 @@ main {
     justify-content: space-between;
     align-items: center;
 }
-.header-links-user {
+.header-links-user ul {
     display: flex;
 }
-.header-links-user li {
+.header-links-user ul li {
     margin-right: 22px;
+    list-style-type: none;
 }
 .header-logo {
     margin-right: 13%;
