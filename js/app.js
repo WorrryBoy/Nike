@@ -3,10 +3,24 @@ let next = document.querySelector('.next');
 let calc = 0;
 next.addEventListener('click', ()=> {
     calc = calc + 354;
-    if (calc > 1062) {
-        calc = 0
-        document.querySelector('.box-sneak').style.right = calc + 'px';
-    } 
+    if (window.screen.width > 1201) {
+        if (calc > 1062) {
+            calc = 0
+            document.querySelector('.box-sneak').style.right = calc + 'px';
+        } 
+    }
+    if (window.screen.width < 1201 && window.screen.width > 745) {
+        if (calc > 1416) {
+            calc = 0
+            document.querySelector('.box-sneak').style.right = calc + 'px';
+        }
+    }
+    if (window.screen.width < 745) {
+        if (calc > 1770) {
+            calc = 0
+            document.querySelector('.box-sneak').style.right = calc + 'px';
+        } 
+    }
     document.querySelector('.box-sneak').style.right = calc + 'px';
 });
 previous.addEventListener('click', ()=> {
@@ -217,7 +231,6 @@ let con = document.querySelectorAll('.box-platform');
 con.forEach((el) =>{
     el.addEventListener('mouseover', (e)=> {
         let dataimg = e.currentTarget.getAttribute("data-img");
-        console.log(dataimg)
         document.querySelector(`.sport-img-${dataimg}`).classList.add('transform-sport')
         document.querySelector(`.sport-platform-${dataimg}`).classList.add('change')
         document.querySelector(`.sport-img-${dataimg}`).classList.remove('transform-sport2')
@@ -225,7 +238,6 @@ con.forEach((el) =>{
     });
     el.addEventListener('mouseout', (e)=> {
         let dataimg = e.currentTarget.getAttribute("data-img");
-        console.log(dataimg)
         document.querySelector(`.sport-img-${dataimg}`).classList.remove('transform-sport')
         document.querySelector(`.sport-img-${dataimg}`).classList.add('transform-sport2')
         document.querySelector(`.sport-platform-${dataimg}`).classList.remove('change')
@@ -254,7 +266,6 @@ window.addEventListener('scroll', ()=> {
             shoesRd.style.transform = `translateY(${-qrd}px)`
         }   
     }
-    console.log(scrolldistance)
 });
 let mail = document.querySelector('.email')
 document.querySelector('.subscribe-btn').addEventListener('mouseover', ()=> {
