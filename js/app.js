@@ -262,7 +262,7 @@ window.addEventListener('scroll', ()=> {
         if (scrolldistance > 5587 && scrolldistance < 6390) {
             q = ((scrolldistance - 5587) /2)
             qnd = ((scrolldistance - 5587) /2.7)
-            qrd = ((scrolldistance - 5587) /3)
+            qrd = ((scrolldistance - 5587) /6)
             if (q < 240.6) {
                 shoesSt.style.transform = `translateY(${-q}px)`
                 shoesNd.style.transform = `translateY(${-qnd}px)`
@@ -274,7 +274,7 @@ window.addEventListener('scroll', ()=> {
         if (scrolldistance > 8314 && scrolldistance < 9300) {
             q = ((scrolldistance - 8314) /2)
             qnd = ((scrolldistance - 8314) /2.7)
-            qrd = ((scrolldistance - 8314) /3)
+            qrd = ((scrolldistance - 8314) /6)
             if (q < 240.6) {
                 shoesSt.style.transform = `translateY(${-q}px)`
                 shoesNd.style.transform = `translateY(${-qnd}px)`
