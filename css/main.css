@@ -6,30 +6,6 @@
     background-color: rgb(172, 52, 52);
     border-radius: 10px;
 }
-@font-face {
-    font-family: 'FuturaBD';
-    src: url('FuturaBD');
-}
-@font-face {
-    font-family: 'FuturaXB';
-    src: url('FuturaXB');
-}
-@font-face {
-    font-family: 'FuturaLT';
-    src: url('FuturaLT');
-}
-@font-face {
-    font-family: 'FuturaBK';
-    src: url('FuturaBK');
-}
-@font-face {
-    font-family: 'FuturaMD';
-    src: url('FuturaMD');
-}
-@font-face {
-    font-family: 'FuturaHV';
-    src: url('FuturaHV');
-}
 .header {
     background: url(../img/bg.jpg);
 }
@@ -1091,9 +1067,12 @@ input {outline: 0 !important;}
 }
 @keyframes opacity1 {
     0% {
-        opacity: 0.3;
+        opacity: 0.1;
     }
     50% {
+        opacity: 0.3;
+    }
+    70% {
         opacity: 0.6;
     }
     100% {
