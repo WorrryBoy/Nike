@@ -290,7 +290,6 @@ window.addEventListener('scroll', ()=> {
             }
         }
     }
-    console.log(scrolldistance)
 });
 let mail = document.querySelector('.email')
 document.querySelector('.subscribe-btn').addEventListener('mouseover', ()=> {
