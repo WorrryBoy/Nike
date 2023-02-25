@@ -1322,7 +1322,6 @@ input {outline: 0 !important;}
     .subscribe-btn {
         display: block;
         position: static;
-        max-width: 100px;
         margin-left: 25%;
     }
 }
